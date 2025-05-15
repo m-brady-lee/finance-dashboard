@@ -96,10 +96,10 @@ Financial Literacy: Translating raw transaction data into meaningful financial K
 
 ## SCREENSHOTS
 
-![Yearly Summary](screenshots/yearly-summary-financial-overview.png)
+![Yearly Summary](yearly-summary-financial-overview.png)
 
-![Income vs Expenses](screenshots/yearly-summary-monthly-details.png)
+![Income vs Expenses](yearly-summary-monthly-details.png)
 
-![Expense Breakdown](screenshots/income-vs-expenses.png)
+![Expense Breakdown](income-vs-expenses.png)
 
 
