@@ -12,14 +12,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import random
 
-### FOR LOCAL HOSTING - comment this out for web hosting
+### FOR LOCAL HOSTING 
 # Read the CSV file
-df = pd.read_csv('Leejillo Financial Data.csv')
-###
-
-# ### FOR WEB HOSTING - Search for WEB HOSTING to uncomment out other sections
-# # Read the CSV file
-# df = pd.read_csv('/home/fianshadow/Leejillo_finances/Test Financial Data.csv')
+df = pd.read_csv('Test Financial Data.csv')
 ###
 
 # Process the Date and Amount columns
@@ -200,17 +195,6 @@ income_vs_expenses_layout = (html.Div([
         }),
         html.Div([
             html.H1("Income vs Expenses", style={'textAlign': 'center', 'marginBottom': '2px'}),
-            # ### FOR WEB HOSTING
-            # html.Div("Interactive Demo • Built by Michael Lee • For Portfolio Display Only",
-            #          style={
-            #             'fontSize': '14px',
-            #             'fontStyle': 'italic',
-            #             'color': '#777',
-            #             'marginTop': '0px',
-            #             'marginBottom': '0px',
-            #             'textAlign': 'center',
-            #         })
-            ###
         ]),
 
         html.Div([
@@ -2620,16 +2604,6 @@ def update_cash_overview(selected_year, selected_month):
 def update_summary_title(selected_year):
     return html.Div([
         html.H1("Yearly Summary", style={'marginBottom': '6px'}),
-        # ### FOR WEB HOSTING
-        # html.Div("Interactive Demo • Built by Michael Lee • For Portfolio Display Only",
-        #          style={
-        #             'fontSize': '14px',
-        #             'fontStyle': 'italic',
-        #             'color': '#777',
-        #             'marginTop': '4px',
-        #             'marginBottom': '8px',
-        #         })
-        ###
     ])
 
 
@@ -2981,8 +2955,8 @@ def update_top5_expenses(year, selected_month):
     fig = go.Figure(data=[go.Pie(
         labels=top5_expenses['Sub-Category (Account)'],
         values=top5_expenses['Amount'],
-        text=top5_expenses['Display'],  # what shows below each slice
-        textinfo='text',  # tells Plotly to show your custom text
+        text=top5_expenses['Display'], 
+        textinfo='text',  
         hovertemplate=(
             "%{label}<br>"
             "$%{value:,.2f} (%{customdata:.1f}%)<extra></extra>"
@@ -3089,8 +3063,8 @@ def update_top5_purchases(selected_year, selected_month, toggle_mode):
                 'padding': '6px',
                 'fontFamily': 'Open Sans',
                 'fontSize': '14px',
-                'whiteSpace': 'normal',  # ✅ Allows wrapping
-                'maxWidth': '200px'  # ✅ Optional: prevents overly wide columns
+                'whiteSpace': 'normal',  
+                'maxWidth': '200px'  
             },
 
             style_header={
@@ -3240,7 +3214,7 @@ def update_monthly_income_bar(year, selected_month, selected_accounts):
         Input('merchant-search-store', 'data'),
         Input('search-button', 'n_clicks'),  # triggers updates even on empty results
     ],
-    State('merchant-search', 'value'),  # <- NEW: used for showing the search term in the title
+    State('merchant-search', 'value'),  
     prevent_initial_call=True
 )
 def update_monthly_expenses(year, selected_month, payments, utilities, categories, stored_search_value, _, search_input):
@@ -3451,7 +3425,6 @@ def update_expense_filters_on_date_change(year, month, search_value):
     raise dash.exceptions.PreventUpdate
 
 
-### FOR WEB HOSTING - comment this out for web hosting
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True)
 ###
