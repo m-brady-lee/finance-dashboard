@@ -94,6 +94,10 @@ Visualization: Using Plotly to create readable, insightful, and professional cha
 
 Financial Literacy: Translating raw transaction data into meaningful financial KPIs.
 
+## NOTES ON DATA USAGE
+
+This project uses sample financial data. No proprietary, sensitive, or personally identifiable information is included.
+
 ## SCREENSHOTS
 
 ![Yearly Summary](yearly-summary-financial-overview.png)
